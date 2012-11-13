@@ -1,10 +1,17 @@
 ==Usage==
-scottnla@faraday-cage:~/$ python identifyFile.py [filename]
+scottnla@faraday-cage:~/$ python pyd3.py [filename]
 
 ==Description==
 uses Echonest's Audiofingerprinting utility to determine the audio fingerprint of your track, search the database for matching fingerprints, and retrieves the appropriate ID3 Tags based off of search results.  The correct ID3 tags are then written to your mp3 file.
 
+Because the audiofingerprinting searches only for content that is in the audio track, information such as release date, album, etc. that is release-specfic is not available.  HOWEVER, this data can be acquired once the track identity, artist, etc. have been confirmed (but I haven't implemented this yet).
+
+===Supported Databases===
+-Echonest
+-Beatport (COMING SOON)
+-Discogs (COMING SOON)
+
 ==Libraries==
 The following external libraries / utilies are required:
 -Mutagen (python library)
--ENMFP (EchoNest Musical Fingerprint) Utility
+-ENMFP (EchoNest Musical Fingerprint) Utility [for Echonest database only]
